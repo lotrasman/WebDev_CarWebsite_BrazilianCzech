@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wheels on Fire — Premium Cars</title>
+  <style>
+    /* Reset / base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #222;
+      background: #f9f9f9;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* Header / Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      padding: 0.5rem;
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: #f05a28;
+    }
+    .cta-btn {
+      padding: 0.6rem 1.2rem;
+      background: #f05a28;
+      color: white;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+    .cta-btn:hover {
+      background: #d75020;
+    }
+
+    /* Hero / Banner */
+    .hero {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    /* Featured cars grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 1000px) {
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .card .card-img {
+      width: 100%;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+    .card .card-body {
+      padding: 1rem;
+    }
+    .card .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.6rem;
+    }
+    .card .meta {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+    .card .price {
+      font-weight: bold;
+      color: #f05a28;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Wheels on Fire</div>
+      <nav>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta-btn" href="#contact">Inquire</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h1>Premium Cars. Expertly Curated.</h1>
+      <p>Showcasing finely tuned, high-quality vehicles in Dublin and surrounding areas. Browse what’s available and find your future car.</p>
+      <a class="cta-btn" href="#collection">View Collection</a>
+    </section>
+
+    <section id="collection">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Featured Vehicles</h2>
+      <div class="grid">
+        <div class="card" onclick="window.location='#';">
+          <div class="card-img" style="background-image: url('https://via.placeholder.com/400x300');"></div>
+          <div class="card-body">
+            <div class="title">1967 Ford Mustang</div>
+            <div class="meta">Classic · Restored · Cherry Red</div>
+            <div class="price">€32,500</div>
+          </div>
+        </div>
+        <div class="card" onclick="window.location='#';">
+          <div class="card-img" style="background-image: url('https://via.placeholder.com/400x300');"></div>
+          <div class="card-body">
+            <div class="title">Porsche 911 Carrera</div>
+            <div class="meta">1998 · High Spec</div>
+            <div class="price">€68,900</div>
+          </div>
+        </div>
+        <div class="card" onclick="window.location='#';">
+          <div class="card-img" style="background-image: url('https://via.placeholder.com/400x300');"></div>
+          <div class="card-body">
+            <div class="title">Volvo V70</div>
+            <div class="meta">Reliable · Long Ownership</div>
+            <div class="price">€6,800</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top: 4rem;">
+      <h2 style="text-align:center; margin-bottom:1rem;">About Us</h2>
+      <p style="max-width:700px; margin:0 auto; color:#555;">
+        With decades in the car business, we believe in transparency, quality, and finding the right match — not just the next sale. Each vehicle is chosen with care, inspected in detail, and presented transparently. We’re based around Dublin and serve clients who expect more than “just a car.”
+      </p>
+    </section>
+
+    <section id="contact" style="margin-top:4rem; text-align:center;">
+      <h2>Contact / Enquire</h2>
+      <p style="color:#555; margin-bottom:1rem;">Want to see a car or ask about our sourcing service? Drop us a message.</p>
+      <a class="cta-btn" href="mailto:john@wheelsonfire.example?subject=Car Enquiry">Email Us</a>
+    </section>
+
+    <footer>
+      © <span id="yeardisplay"></span> Wheels on Fire — All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // set current year
+    document.getElementById('yeardisplay').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
